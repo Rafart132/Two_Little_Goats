@@ -3,13 +3,17 @@ extends PlayerStateBase
 
 func on_physics_process(_delta: float) -> void:
 	update_animation()
-	player.velocity = Vector2(
+	var input_vector = Vector2(
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-		).normalized() * player.speed * 2
+		).normalized()
 		
+	if input_vector.y != 0:
+		input_vector.y *= player.VerticalSpeed
+		
+	player.velocity = input_vector * player.speed * 2
 	player.move_and_slide()
-
+	
 func update_animation() -> void:
 	# Cambia la animación según la dirección de movimiento y guardando la ultima direccion
 	if player.velocity.length() > 0.1:

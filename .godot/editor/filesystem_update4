@@ -1,2 +1,10 @@
 res://Scr/player.gd
 res://Scr/Maquina de estados/PlayerState/StateWalk.gd
+res://Scr/Maquina de estados/state_machine.gd
+res://Scr/Maquina de estados/state_base.gd
+res://Scr/Maquina de estados/PlayerState/StateIdle.gd
+res://Scr/Maquina de estados/PlayerState/PlayerStateRun.gd
+res://Scr/Maquina de estados/PlayerState/player_state_base.gd
+res://Scr/Maquina de estados/PlayerState/Nombres_Estados_Jugador.gd
+res://escenas/prueba.tscn
+res://escenas/player/player.tscn

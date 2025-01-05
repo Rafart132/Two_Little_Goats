@@ -98,3 +98,4 @@ tile_set = SubResource("TileSet_trtti")
 
 [node name="player" parent="." instance=ExtResource("3_gte57")]
 position = Vector2(288, 168)
+VerticalSpeed = 0.3
