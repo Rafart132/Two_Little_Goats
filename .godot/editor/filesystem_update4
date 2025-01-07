@@ -1,0 +1,6 @@
+res://escenas/prueba.tscn
+res://escenas/player/player.tscn
+res://escenas/entidades/maid.tscn
+res://Scr/Maquina de estados/entities_states/PatrolState.gd
+res://Scr/Maquina de estados/entities_states/ChaseState.gd
+res://escenas/entidades/maid.gd

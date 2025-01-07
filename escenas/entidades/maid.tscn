@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scr/Maquina de estados/entities_states/ChaseState.gd" id="5_bq57y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri3o3"]
-size = Vector2(13, 10)
+size = Vector2(32, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs3bg"]
 atlas = ExtResource("1_stc4q")
@@ -148,19 +148,19 @@ animations = [{
 radius = 222.324
 
 [node name="Maid" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_qdjbg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_ri3o3")
-disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -11)
+position = Vector2(0, -23)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wkkxb")
-animation = &"Walk_up"
-frame_progress = 0.301712
+animation = &"Walk_down"
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("default_state")]
 script = ExtResource("3_50da7")
@@ -174,6 +174,7 @@ patrol_points = Array[Vector2]([Vector2(16, 48), Vector2(16, 336)])
 script = ExtResource("5_bq57y")
 
 [node name="zona_deteccion" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zona_deteccion"]
 shape = SubResource("CircleShape2D_b2k0s")
