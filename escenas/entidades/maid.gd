@@ -1,12 +1,28 @@
 extends CharacterBody2D
 class_name maid
 
+
+@export var rango_vision:int = 222
+
 @onready var anim:AnimatedSprite2D = $AnimatedSprite2D
 @onready var Detect:Area2D = $zona_deteccion
+@onready var ray:RayCast2D =$RayCast2D
 
-func _process(delta: float) -> void:
-	move_and_animate(delta)
+var can_see_player:bool = false
 
+
+func can_see(target: Node2D) -> bool:
+	ray.target_position = (target.global_position - global_position).normalized() * rango_vision
+	ray.force_raycast_update()
+	return ray.is_colliding() and ray.get_collider() == target
+	
+	if !ray.is_colliding():
+		Detect.disable = true
+		Detect.disable = false
+
+
+
+#region ACTUALIZAR ANIMACION
 func move_and_animate(_delta: float) -> void:
 	if velocity.length() > 0:
 		move_and_slide()
@@ -24,3 +40,4 @@ func _update_animation() -> void:
 		anim.play("Walk_down")
 	elif velocity.y < 0:
 		anim.play("Walk_up")
+#endregion

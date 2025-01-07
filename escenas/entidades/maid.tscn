@@ -162,6 +162,17 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wkkxb")
 animation = &"Walk_down"
 
+[node name="zona_deteccion" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zona_deteccion"]
+shape = SubResource("CircleShape2D_b2k0s")
+debug_color = Color(0.823529, 0, 0.239216, 0.0745098)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 3
+hit_from_inside = true
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("default_state")]
 script = ExtResource("3_50da7")
 default_state = NodePath("PatrolState")
@@ -172,13 +183,6 @@ patrol_points = Array[Vector2]([Vector2(16, 48), Vector2(16, 336)])
 
 [node name="ChaseState" type="Node" parent="StateMachine"]
 script = ExtResource("5_bq57y")
-
-[node name="zona_deteccion" type="Area2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="zona_deteccion"]
-shape = SubResource("CircleShape2D_b2k0s")
-debug_color = Color(0.823529, 0, 0.239216, 0.0745098)
 
 [connection signal="body_entered" from="zona_deteccion" to="StateMachine/PatrolState" method="_on_zona_deteccion_body_entered"]
 [connection signal="body_exited" from="zona_deteccion" to="StateMachine/ChaseState" method="_on_zona_deteccion_body_exited"]

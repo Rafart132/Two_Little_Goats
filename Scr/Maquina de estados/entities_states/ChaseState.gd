@@ -2,14 +2,15 @@ extends EntytiStateBase
 class_name chase_state
 
 @export var speed: float = 100.0 # Velocidad al perseguir
-var player: Node2D = null
+var player: CharacterBody2D = null
 
 
 func start() -> void:
 	pass
 
 func on_process(delta: float) -> void:
-	if player == null:
+	if player == null or not Maid.can_see(player):
+		state_machine.change_to("PatrolState")
 		return # No hay jugador que perseguir
 	
 	# Dirección hacia el jugador
@@ -18,6 +19,7 @@ func on_process(delta: float) -> void:
 	# Movimiento hacia el jugador
 	Maid.position += direction * speed * delta
 	Maid.move_and_animate(delta)
+	Maid.ray.force_raycast_update()
 
 func end() -> void:
 	Maid.velocity = Vector2.ZERO
