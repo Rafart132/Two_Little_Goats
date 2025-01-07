@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://cp7pkce1vddb1"]
+[gd_scene load_steps=8 format=4 uid="uid://cp7pkce1vddb1"]
 
 [ext_resource type="Texture2D" uid="uid://ddqo524bbdgur" path="res://Assets/tileset/tileset_dungeon.png" id="1_h7fqh"]
 [ext_resource type="Texture2D" uid="uid://3w8o3lgtphww" path="res://Assets/tileset/spritesheet.png" id="2_tepq6"]
 [ext_resource type="PackedScene" uid="uid://bnc02sf4e01or" path="res://escenas/player/player.tscn" id="3_gte57"]
+[ext_resource type="PackedScene" uid="uid://brt6mxsc3b0c2" path="res://escenas/entidades/maid.tscn" id="4_8g8qv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1qbc"]
 texture = ExtResource("1_h7fqh")
@@ -97,5 +98,9 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAA
 tile_set = SubResource("TileSet_trtti")
 
 [node name="player" parent="." instance=ExtResource("3_gte57")]
+y_sort_enabled = true
 position = Vector2(288, 168)
-VerticalSpeed = 0.3
+
+[node name="Maid" parent="." instance=ExtResource("4_8g8qv")]
+y_sort_enabled = true
+position = Vector2(16, 336)

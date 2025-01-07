@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="Two_Little_Goats"
+run/main_scene="res://escenas/prueba.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+Player=""
 
 [rendering]
 
