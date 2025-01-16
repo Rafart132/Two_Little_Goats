@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3itn2k212ux7"]
+
+[ext_resource type="Script" path="res://Scr/puerta.gd" id="1_t5dba"]
+[ext_resource type="Texture2D" uid="uid://ddqo524bbdgur" path="res://Assets/tileset/tileset_dungeon.png" id="2_6ig45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxa81"]
+size = Vector2(32, 32)
+
+[node name="Puerta" type="Node2D"]
+script = ExtResource("1_t5dba")
+
+[node name="Salida" type="Sprite2D" parent="."]
+position = Vector2(0, -15.5)
+texture = ExtResource("2_6ig45")
+region_enabled = true
+region_rect = Rect2(163, -6, 27, 33)
+
+[node name="Luz" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.196078)
+position = Vector2(0, 16.5)
+texture = ExtResource("2_6ig45")
+region_enabled = true
+region_rect = Rect2(163, 25, 27, 35)
+
+[node name="deteccion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deteccion"]
+shape = SubResource("RectangleShape2D_mxa81")
+
+[connection signal="body_entered" from="deteccion" to="." method="_on_deteccion_body_entered"]
+[connection signal="body_exited" from="deteccion" to="." method="_on_deteccion_body_exited"]

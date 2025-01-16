@@ -1,6 +1,5 @@
 extends PlayerStateBase
 
-
 func on_physics_process(_delta: float) -> void:
 	update_animation()
 	var input_vector = Vector2(

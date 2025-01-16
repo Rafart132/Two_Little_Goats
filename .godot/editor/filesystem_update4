@@ -1,6 +1,20 @@
-res://escenas/prueba.tscn
 res://escenas/player/player.tscn
+res://escenas/prueba.tscn
 res://escenas/entidades/maid.tscn
-res://Scr/Maquina de estados/entities_states/PatrolState.gd
+res://administrador_escena.tscn
+res://mapa_2.tscn
+res://puerta.tscn
+res://Autoload/AD.gd
+res://Scr/escondite.gd
 res://Scr/Maquina de estados/entities_states/ChaseState.gd
+res://escenas/administrador_escena.tscn
+res://escenas/mapa_2.tscn
+res://escenas/puerta.tscn
+res://escenas/escondite.tscn
+res://Scr/Maquina de estados/state_machine.gd
+res://Scr/Maquina de estados/entities_states/PatrolState.gd
+res://Scr/player.gd
 res://escenas/entidades/maid.gd
+res://Scr/administrador_escena.gd
+res://Scr/puerta.gd
+res://Scr/Maquina de estados/PlayerState/StateWalk.gd

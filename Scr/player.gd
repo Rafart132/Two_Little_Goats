@@ -14,3 +14,7 @@ var states:PlayerStateNames = PlayerStateNames.new()
 
 @onready var movimientos = [Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right")]
 @onready var movimientosNOT = [ not Input.is_action_pressed("ui_down") or not Input.is_action_pressed("ui_up") or not Input.is_action_pressed("ui_left") or not Input.is_action_pressed("ui_right")]
+
+func set_spawn(locacion: Vector2):
+	
+	position = locacion

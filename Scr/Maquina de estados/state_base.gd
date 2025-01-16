@@ -4,7 +4,7 @@ class_name StateBase extends Node
 var controlled_node:Node # @onready var player:Player = self.owner
 
 ## referencia a la maquina de estados
-var state_machine:StateMachine
+var state_machine:StateMachin
 
 #region métodos comunes
 

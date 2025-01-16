@@ -7,32 +7,45 @@ class_name PatrolState
 @export var speed: float = 100.0 # Velocidad del enemigo
 
 
-var current_point_index: int = 0 # Índice del punto de patrullaje actual
+var current_point_index: int = 0
 
 func start() -> void:
 	if patrol_points.size() > 0:
-		current_point_index = 0
-
+		Maid.navi.set_target_position(patrol_points[current_point_index])
 
 func on_process(delta: float) -> void:
+	
 	if patrol_points.size() == 0:
 		return # Si no hay puntos, no hace nada
 	
-	var target_point = patrol_points[current_point_index]
-	var direction = (target_point - Maid.position).normalized()
+	var player = _find_player()
+	if not Ad.get_player_hide():
+		if player and Maid.can_see(player):
+			get_parent().find_child("ChaseState").player = player
+			state_machine.change_to("ChaseState")
+			return
 	
-	Maid.velocity = direction * speed
-	Maid.move_and_animate(delta)
 	
-	# Comprueba si llegó al punto objetivo
-	if Maid.position.distance_to(target_point) < 5.0:
+	if not Maid.navi.is_navigation_finished():
+		var direction = Maid.navi.get_next_path_position() - Maid.position
+		if direction.length() > 0:
+			direction = direction.normalized()
+			Maid.velocity = direction * speed
+			Maid.move_and_animate(delta)
+	else:
 		_go_to_next_point()
-	
 
 func _go_to_next_point() -> void:
 	current_point_index += 1
 	if current_point_index >= patrol_points.size():
-		current_point_index = 0 # Reinicia el ciclo de patrullaje
+		current_point_index = 0
+	Maid.navi.set_target_position(patrol_points[current_point_index])
+
+func _find_player() -> Node2D:
+	for body in Maid.Detect.get_overlapping_bodies():
+		if body.is_in_group("Player"):
+			return body
+	return null
 
 func end() -> void:
 	Maid.velocity = Vector2.ZERO
@@ -40,5 +53,6 @@ func end() -> void:
 
 func _on_zona_deteccion_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		get_parent().find_child("ChaseState").player = body
-		state_machine.change_to("ChaseState")
+		if not Ad.get_player_hide():
+			get_parent().find_child("ChaseState").player = body
+			state_machine.change_to("ChaseState")

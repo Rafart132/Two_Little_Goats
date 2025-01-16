@@ -1,4 +1,5 @@
-class_name StateMachine extends Node
+@icon("res://Assets/IconGodotNode/icon.svg")
+class_name StateMachin extends Node
 
 ## nodo que vamos a controlar
 @onready var controlled_node = self.owner
@@ -24,7 +25,7 @@ func change_to(new_state:String) -> void:
 	
 ## funcion que prepara las variables para el nuevo estado y lanza su start
 func _state_start() -> void:
-	prints("StateMachine", controlled_node.name, "start state", current_state.name)
+	#prints("StateMachine", controlled_node.name, "start state", current_state.name)
 	## configuramos el estado
 	current_state.controlled_node = controlled_node
 	current_state.state_machine = self

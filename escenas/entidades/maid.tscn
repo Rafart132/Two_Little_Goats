@@ -6,8 +6,8 @@
 [ext_resource type="Script" path="res://Scr/Maquina de estados/entities_states/PatrolState.gd" id="4_cekvq"]
 [ext_resource type="Script" path="res://Scr/Maquina de estados/entities_states/ChaseState.gd" id="5_bq57y"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri3o3"]
-size = Vector2(32, 13)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6k7y"]
+size = Vector2(32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs3bg"]
 atlas = ExtResource("1_stc4q")
@@ -153,8 +153,7 @@ collision_mask = 2
 script = ExtResource("1_qdjbg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1.5)
-shape = SubResource("RectangleShape2D_ri3o3")
+shape = SubResource("RectangleShape2D_m6k7y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -23)
@@ -179,10 +178,14 @@ default_state = NodePath("PatrolState")
 
 [node name="PatrolState" type="Node" parent="StateMachine"]
 script = ExtResource("4_cekvq")
-patrol_points = Array[Vector2]([Vector2(16, 48), Vector2(16, 336)])
+patrol_points = Array[Vector2]([Vector2(16, 48), Vector2(64, 512), Vector2(521, 432)])
 
 [node name="ChaseState" type="Node" parent="StateMachine"]
 script = ExtResource("5_bq57y")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_max_distance = 200.0
+navigation_layers = 255
 
 [connection signal="body_entered" from="zona_deteccion" to="StateMachine/PatrolState" method="_on_zona_deteccion_body_entered"]
 [connection signal="body_exited" from="zona_deteccion" to="StateMachine/ChaseState" method="_on_zona_deteccion_body_exited"]

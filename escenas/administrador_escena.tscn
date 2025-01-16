@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7ix6fuf1dnsu"]
+
+[ext_resource type="Script" path="res://Scr/administrador_escena.gd" id="1_jrx18"]
+[ext_resource type="PackedScene" uid="uid://cp7pkce1vddb1" path="res://escenas/prueba.tscn" id="2_mt6p3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ypqd"]
+line_spacing = 4.0
+font_size = 45
+outline_size = 2
+
+[node name="Administrador_Escena" type="Node2D"]
+script = ExtResource("1_jrx18")
+
+[node name="EscenaActual" type="Node2D" parent="."]
+
+[node name="prueba" parent="EscenaActual" instance=ExtResource("2_mt6p3")]
+
+[node name="Menu" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+offset_left = 240.0
+offset_top = 216.0
+offset_right = 808.0
+offset_bottom = 416.0
+color = Color(0.051971, 0.051971, 0.051971, 1)
+
+[node name="Label" type="Label" parent="Menu"]
+offset_left = 320.0
+offset_top = 272.0
+offset_right = 728.0
+offset_bottom = 360.0
+text = "MENU"
+label_settings = SubResource("LabelSettings_5ypqd")
+horizontal_alignment = 1
+vertical_alignment = 1
