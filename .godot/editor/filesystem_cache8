@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736818886
+::res://::1737324652
 ::res://Assets/::1736181039
 stage_one.png::CompressedTexture2D::3721078748708027852::1736181037::1736181039::1::::<><>::
 stage_three.png::CompressedTexture2D::6896703808930872772::1736181037::1736181039::1::::<><>::
 stage_two.png::CompressedTexture2D::2135205211163682883::1736181037::1736181039::1::::<><>::
-::res://Assets/IconGodotNode/::1736818886
+::res://Assets/IconGodotNode/::1736818888
 icon.svg::CompressedTexture2D::219959866051796940::1736013754::1736818888::1::::<><>::
 ::res://Assets/IconGodotNode/color/::1736818825
 icon_area_damage.png::CompressedTexture2D::7602627408249328938::1736027798::1736818825::1::::<><>::
@@ -404,33 +404,33 @@ spritesheet.png::CompressedTexture2D::2012734082275437638::1736095932::173609593
 tileset_dungeon.png::CompressedTexture2D::7403763700750913369::1736095932::1736095934::1::::<><>::
 ::res://Autoload/::1736816040
 AD.gd::GDScript::-1::1736816040::0::1::::<>Node<>::
-::res://escenas/::1736818571
-administrador_escena.tscn::PackedScene::7036851530055291524::1736818571::0::1::::<><>::res://Scr/administrador_escena.gd<>uid://cp7pkce1vddb1::::res://escenas/prueba.tscn
-escondite.tscn::PackedScene::2819535152214555277::1736818571::0::1::::<><>::res://Scr/escondite.gd<>uid://3w8o3lgtphww::::res://Assets/tileset/spritesheet.png
-mapa_2.tscn::PackedScene::3374529167185624662::1736818571::0::1::::<><>::uid://3w8o3lgtphww::::res://Assets/tileset/spritesheet.png<>res://escenas/prueba.gd<>uid://ddqo524bbdgur::::res://Assets/tileset/tileset_dungeon.png<>uid://bnc02sf4e01or::::res://escenas/player/player.tscn<>uid://d3itn2k212ux7::::res://escenas/puerta.tscn
+::res://escenas/::1736819294
+administrador_escena.tscn::PackedScene::7036851530055291524::1736819294::0::1::::<><>::res://Scr/administrador_escena.gd<>uid://cp7pkce1vddb1::::res://escenas/prueba.tscn
+escondite.tscn::PackedScene::2819535152214555277::1736819294::0::1::::<><>::res://Scr/escondite.gd<>uid://3w8o3lgtphww::::res://Assets/tileset/spritesheet.png
+mapa_2.tscn::PackedScene::3374529167185624662::1736819294::0::1::::<><>::uid://3w8o3lgtphww::::res://Assets/tileset/spritesheet.png<>res://escenas/prueba.gd<>uid://ddqo524bbdgur::::res://Assets/tileset/tileset_dungeon.png<>uid://bnc02sf4e01or::::res://escenas/player/player.tscn<>uid://d3itn2k212ux7::::res://escenas/puerta.tscn
 prueba.gd::GDScript::-1::1736478915::0::1::::<>Node2D<>::
-prueba.tscn::PackedScene::5892662835352570096::1736818571::0::1::::<><>::uid://ddqo524bbdgur::::res://Assets/tileset/tileset_dungeon.png<>res://escenas/prueba.gd<>uid://3w8o3lgtphww::::res://Assets/tileset/spritesheet.png<>uid://bnc02sf4e01or::::res://escenas/player/player.tscn<>uid://brt6mxsc3b0c2::::res://escenas/entidades/maid.tscn<>uid://bgf2lj2vippsv::::res://escenas/escondite.tscn<>uid://d3itn2k212ux7::::res://escenas/puerta.tscn
-puerta.tscn::PackedScene::9142242968001098966::1736818571::0::1::::<><>::res://Scr/puerta.gd<>uid://ddqo524bbdgur::::res://Assets/tileset/tileset_dungeon.png
-::res://escenas/entidades/::1736818571
+prueba.tscn::PackedScene::5892662835352570096::1736819294::0::1::::<><>::uid://ddqo524bbdgur::::res://Assets/tileset/tileset_dungeon.png<>res://escenas/prueba.gd<>uid://3w8o3lgtphww::::res://Assets/tileset/spritesheet.png<>uid://bnc02sf4e01or::::res://escenas/player/player.tscn<>uid://brt6mxsc3b0c2::::res://escenas/entidades/maid.tscn<>uid://bgf2lj2vippsv::::res://escenas/escondite.tscn<>uid://d3itn2k212ux7::::res://escenas/puerta.tscn
+puerta.tscn::PackedScene::9142242968001098966::1736819294::0::1::::<><>::res://Scr/puerta.gd<>uid://ddqo524bbdgur::::res://Assets/tileset/tileset_dungeon.png
+::res://escenas/entidades/::1736819294
 maid.gd::GDScript::-1::1736818570::0::1::::maid<>CharacterBody2D<>::
-maid.tscn::PackedScene::3620759095141295819::1736818571::0::1::::<><>::res://escenas/entidades/maid.gd<>uid://5okruwm738c2::::res://Assets/stage_two.png<>res://Scr/Maquina de estados/state_machine.gd<>res://Scr/Maquina de estados/entities_states/PatrolState.gd<>res://Scr/Maquina de estados/entities_states/ChaseState.gd
-::res://escenas/player/::1736818570
-player.tscn::PackedScene::3304571502218545853::1736818570::0::1::::<><>::res://Scr/player.gd<>uid://bopcjr5wmg42h::::res://Assets/player/64X128_Idle_Free.png<>uid://wi2k6dchb37x::::res://Assets/player/64X128_Runing_Free.png<>uid://chrr6ttktym::::res://Assets/player/64X128_Walking_Free.png<>res://Scr/Maquina de estados/state_machine.gd<>res://Scr/Maquina de estados/PlayerState/StateIdle.gd<>res://Scr/Maquina de estados/PlayerState/StateWalk.gd<>res://Scr/Maquina de estados/PlayerState/PlayerStateRun.gd
-::res://Scr/::1736818133
-administrador_escena.gd::GDScript::-1::1736732419::0::1::::Administrador_Escena<>Node2D<>res://Assets/IconGodotNode/IconGodotNode/color/icon_map_2.png::
-escondite.gd::GDScript::-1::1736818133::0::1::::<>StaticBody2D<>::
+maid.tscn::PackedScene::3620759095141295819::1736819294::0::1::::<><>::res://escenas/entidades/maid.gd<>uid://5okruwm738c2::::res://Assets/stage_two.png<>res://Scr/Maquina de estados/state_machine.gd<>res://Scr/Maquina de estados/entities_states/PatrolState.gd<>res://Scr/Maquina de estados/entities_states/ChaseState.gd
+::res://escenas/player/::1736819293
+player.tscn::PackedScene::3304571502218545853::1736819293::0::1::::<><>::res://Scr/player.gd<>uid://bopcjr5wmg42h::::res://Assets/player/64X128_Idle_Free.png<>uid://wi2k6dchb37x::::res://Assets/player/64X128_Runing_Free.png<>uid://chrr6ttktym::::res://Assets/player/64X128_Walking_Free.png<>res://Scr/Maquina de estados/state_machine.gd<>res://Scr/Maquina de estados/PlayerState/StateIdle.gd<>res://Scr/Maquina de estados/PlayerState/StateWalk.gd<>res://Scr/Maquina de estados/PlayerState/PlayerStateRun.gd
+::res://Scr/::1736818974
+administrador_escena.gd::GDScript::-1::1736818973::0::1::::Administrador_Escena<>Node2D<>res://Assets/IconGodotNode/color/icon_map_2.png::
+escondite.gd::GDScript::-1::1736818973::0::1::::<>StaticBody2D<>::
 player.gd::GDScript::-1::1736818037::0::1::::Player<>CharacterBody2D<>::
-puerta.gd::GDScript::-1::1736732381::0::1::::<>Node<>res://Assets/IconGodotNode/IconGodotNode/node_2D/icon_door.png::
-::res://Scr/Maquina de estados/::1736816978
+puerta.gd::GDScript::-1::1736818974::0::1::::<>Node<>res://Assets/IconGodotNode/node_2D/icon_door.png::
+::res://Scr/Maquina de estados/::1736818974
 state_base.gd::GDScript::-1::1736729156::0::1::::StateBase<>Node<>::
-state_machine.gd::GDScript::-1::1736816978::0::1::::StateMachin<>Node<>::
-::res://Scr/Maquina de estados/entities_states/::1736818570
-ChaseState.gd::GDScript::-1::1736818257::0::1::::chase_state<>EntytiStateBase<>::
+state_machine.gd::GDScript::-1::1736818974::0::1::::StateMachin<>Node<>res://Assets/IconGodotNode/icon.svg::
+::res://Scr/Maquina de estados/entities_states/::1736818973
+ChaseState.gd::GDScript::-1::1736818973::0::1::::chase_state<>EntytiStateBase<>::
 entiti_statebase.gd::GDScript::-1::1736187377::0::1::::EntytiStateBase<>StateBase<>::
-PatrolState.gd::GDScript::-1::1736818570::0::1::::PatrolState<>EntytiStateBase<>::
-::res://Scr/Maquina de estados/PlayerState/::1736187634
+PatrolState.gd::GDScript::-1::1736818973::0::1::::PatrolState<>EntytiStateBase<>::
+::res://Scr/Maquina de estados/PlayerState/::1736818974
 Nombres_Estados_Jugador.gd::GDScript::-1::1736094764::0::1::::PlayerStateNames<>Node<>::
 PlayerStateRun.gd::GDScript::-1::1736187634::0::1::::<>PlayerStateBase<>::
 player_state_base.gd::GDScript::-1::1736182789::0::1::::PlayerStateBase<>StateBase<>::
 StateIdle.gd::GDScript::-1::1736100118::0::1::::<>PlayerStateBase<>::
-StateWalk.gd::GDScript::-1::1736184455::0::1::::<>PlayerStateBase<>::
+StateWalk.gd::GDScript::-1::1736818974::0::1::::<>PlayerStateBase<>::
