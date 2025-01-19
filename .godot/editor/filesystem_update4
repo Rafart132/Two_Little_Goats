@@ -5,3 +5,5 @@ res://escenas/administrador_escena.tscn
 res://escenas/mapa_2.tscn
 res://escenas/puerta.tscn
 res://escenas/escondite.tscn
+res://Scr/Maquina de estados/entities_states/ChaseState.gd
+res://Scr/Maquina de estados/entities_states/PatrolState.gd

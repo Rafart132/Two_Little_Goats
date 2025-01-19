@@ -6,19 +6,22 @@ var player: CharacterBody2D = null
 
 
 func start() -> void:
-	pass
+	if Maid.ray:
+		Maid.ray.force_raycast_update()
+	if player == null:
+		player = Ad.get_player()
 
 func on_process(delta: float) -> void:
 	if player == null or not Maid.can_see(player):
 		state_machine.change_to("PatrolState")
 		return # No hay jugador que perseguir
+		
 	elif Ad.get_player_hide():
 		state_machine.change_to("PatrolState")
+		return
 	# Dirección hacia el jugador
 	var direction = (player.position - Maid.position).normalized()
 	Maid.velocity = direction * speed
-	# Movimiento hacia el jugador
-	Maid.position += direction * speed * delta
 	Maid.move_and_animate(delta)
 	Maid.ray.force_raycast_update()
 

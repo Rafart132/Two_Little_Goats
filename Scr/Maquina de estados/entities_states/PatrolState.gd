@@ -27,18 +27,19 @@ func on_process(delta: float) -> void:
 	
 	
 	if not Maid.navi.is_navigation_finished():
+		_move_to_next_point(delta)
+	else:
+		_go_to_next_point()
+
+func _move_to_next_point(delta: float) -> void:
 		var direction = Maid.navi.get_next_path_position() - Maid.position
 		if direction.length() > 0:
 			direction = direction.normalized()
 			Maid.velocity = direction * speed
 			Maid.move_and_animate(delta)
-	else:
-		_go_to_next_point()
 
 func _go_to_next_point() -> void:
-	current_point_index += 1
-	if current_point_index >= patrol_points.size():
-		current_point_index = 0
+	current_point_index = (current_point_index + 1) % patrol_points.size()
 	Maid.navi.set_target_position(patrol_points[current_point_index])
 
 func _find_player() -> Node2D:
