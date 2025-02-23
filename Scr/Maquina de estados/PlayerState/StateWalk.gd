@@ -1,5 +1,8 @@
 extends PlayerStateBase
 
+
+	
+
 func on_physics_process(_delta: float) -> void:
 	update_animation()
 	var input_vector = Vector2(
@@ -7,10 +10,11 @@ func on_physics_process(_delta: float) -> void:
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 		).normalized()
 		
-	# Adjust the speed for vertical movement
-	#if input_vector.y != 0:
-		#input_vector.y *= player.VerticalSpeed  # Reduce speed by half when moving up or down
 		
+	
+	if input_vector.y != 0:
+		input_vector.y *= player.VerticalSpeed
+		 
 	player.velocity = input_vector * player.speed
 	player.move_and_slide()
 	
@@ -31,12 +35,12 @@ func update_animation() -> void:
 			else:
 				$"../../Anim".play("Walk_Left")
 				player.last_direccion = "Idle_Left"
-	
 
 func on_input(_event: InputEvent) -> void:
-	
+	if Input.is_action_pressed("ui_accept"):
+		player.speed = 200
+	else:
+		player.speed = 100
 	
 	if not Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down"):
 		state_machine.change_to(PlayerStateNames.Idle)
-	elif Input.is_action_pressed("ui_accept"):
-		state_machine.change_to(PlayerStateNames.Run)

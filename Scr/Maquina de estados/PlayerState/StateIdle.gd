@@ -15,5 +15,3 @@ func on_input(_event: InputEvent) -> void:
 	
 	if Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
 		state_machine.change_to(PlayerStateNames.Walk)
-	elif Input.is_action_pressed("ui_accept"):
-		state_machine.change_to(PlayerStateNames.Run)

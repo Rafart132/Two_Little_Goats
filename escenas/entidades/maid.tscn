@@ -148,6 +148,7 @@ animations = [{
 radius = 222.324
 
 [node name="Maid" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_qdjbg")
@@ -159,9 +160,11 @@ shape = SubResource("RectangleShape2D_m6k7y")
 position = Vector2(0, -23)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wkkxb")
-animation = &"Walk_down"
+animation = &"Walk_up"
+frame_progress = 0.676001
 
 [node name="zona_deteccion" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zona_deteccion"]
@@ -178,7 +181,6 @@ default_state = NodePath("PatrolState")
 
 [node name="PatrolState" type="Node" parent="StateMachine"]
 script = ExtResource("4_cekvq")
-patrol_points = Array[Vector2]([Vector2(16, 48), Vector2(64, 512), Vector2(521, 432)])
 
 [node name="ChaseState" type="Node" parent="StateMachine"]
 script = ExtResource("5_bq57y")

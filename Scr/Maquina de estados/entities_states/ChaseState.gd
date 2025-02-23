@@ -1,7 +1,6 @@
 extends EntytiStateBase
 class_name chase_state
 
-@export var speed: float = 100.0 # Velocidad al perseguir
 var player: CharacterBody2D = null
 
 
@@ -21,7 +20,7 @@ func on_process(delta: float) -> void:
 		return
 	# Dirección hacia el jugador
 	var direction = (player.position - Maid.position).normalized()
-	Maid.velocity = direction * speed
+	Maid.velocity = direction * Maid.speed
 	Maid.move_and_animate(delta)
 	Maid.ray.force_raycast_update()
 

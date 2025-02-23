@@ -7,6 +7,7 @@
 size = Vector2(32, 32)
 
 [node name="Puerta" type="Node2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_t5dba")
 
 [node name="Salida" type="Sprite2D" parent="."]

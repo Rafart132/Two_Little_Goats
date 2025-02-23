@@ -2,20 +2,16 @@ extends EntytiStateBase
 
 class_name PatrolState
 
-# Propiedades del estado
-@export var patrol_points: Array[Vector2] = [] # Puntos a patrullar
-@export var speed: float = 100.0 # Velocidad del enemigo
-
 
 var current_point_index: int = 0
 
 func start() -> void:
-	if patrol_points.size() > 0:
-		Maid.navi.set_target_position(patrol_points[current_point_index])
+	if Maid.patrol_points.size() > 0:
+		Maid.navi.set_target_position(Maid.patrol_points[current_point_index])
 
 func on_process(delta: float) -> void:
 	
-	if patrol_points.size() == 0:
+	if Maid.patrol_points.size() == 0:
 		return # Si no hay puntos, no hace nada
 	
 	var player = _find_player()
@@ -35,12 +31,12 @@ func _move_to_next_point(delta: float) -> void:
 		var direction = Maid.navi.get_next_path_position() - Maid.position
 		if direction.length() > 0:
 			direction = direction.normalized()
-			Maid.velocity = direction * speed
+			Maid.velocity = direction * Maid.speed
 			Maid.move_and_animate(delta)
 
 func _go_to_next_point() -> void:
-	current_point_index = (current_point_index + 1) % patrol_points.size()
-	Maid.navi.set_target_position(patrol_points[current_point_index])
+	current_point_index = (current_point_index + 1) % Maid.patrol_points.size()
+	Maid.navi.set_target_position(Maid.patrol_points[current_point_index])
 
 func _find_player() -> Node2D:
 	for body in Maid.Detect.get_overlapping_bodies():
