@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7ix6fuf1dnsu"]
 
-[ext_resource type="Script" path="res://Scr/administrador_escena.gd" id="1_jrx18"]
+[ext_resource type="Script" uid="uid://s4igy4hqt4de" path="res://Scr/administrador_escena.gd" id="1_jrx18"]
 [ext_resource type="PackedScene" uid="uid://cp7pkce1vddb1" path="res://escenas/prueba.tscn" id="2_mt6p3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ypqd"]

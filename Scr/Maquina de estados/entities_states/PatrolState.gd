@@ -50,6 +50,6 @@ func end() -> void:
 
 func _on_zona_deteccion_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		if not Ad.get_player_hide():
+		if not Ad.get_player_hide() and Maid.can_see(body):
 			get_parent().find_child("ChaseState").player = body
 			state_machine.change_to("ChaseState")

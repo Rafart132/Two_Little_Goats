@@ -12,8 +12,8 @@ func on_physics_process(_delta: float) -> void:
 		
 		
 	
-	if input_vector.y != 0:
-		input_vector.y *= player.VerticalSpeed
+	#if input_vector.y != 0:
+		#input_vector.y *= player.VerticalSpeed
 		 
 	player.velocity = input_vector * player.speed
 	player.move_and_slide()

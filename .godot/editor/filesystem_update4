@@ -1,18 +1,10 @@
+res://escenas/administrador_escena.tscn
 res://escenas/player/player.tscn
+res://escenas/mapa_2.tscn
 res://escenas/prueba.tscn
 res://escenas/entidades/maid.tscn
-res://escenas/administrador_escena.tscn
-res://escenas/mapa_2.tscn
-res://escenas/puerta.tscn
-res://escenas/escondite.tscn
-res://Scr/Maquina de estados/PlayerState/StateIdle.gd
-res://Scr/Maquina de estados/PlayerState/StateWalk.gd
-res://escenas/player3d/player3d.tscn
-res://prueba_esce3D.tscn
-res://Scr/player.gd
-res://Scr/Maquina de estados/PlayerState3D/StateIdle3D.gd
-res://Scr/Maquina de estados/PlayerState3D/StateWalk3D.gd
-res://Scr/Maquina de estados/PlayerState3D/player_state_base3D.gd
-res://Scr/player3D.gd
-res://escenas/player3d/Camara3D/camera_3d.gd
-res://escenas/player3d/Camara3D/camera_3d.tscn
+res://Scr/Maquina de estados/state_machine.gd
+res://maid1.tscn
+res://Scr/Maquina de estados/entities_states/ChaseState.gd
+res://escenas/entidades/maid.gd
+res://Scr/Maquina de estados/entities_states/PatrolState.gd

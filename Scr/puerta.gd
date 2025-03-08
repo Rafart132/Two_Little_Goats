@@ -14,7 +14,7 @@ func _physics_process(_delta: float) -> void:
 		puerta_cerrada()
 
 func puerta_cerrada():
-		Ad.get_administrador_escenas().transition_to_scene(nueva_escena, spawn_location)
+	Ad.get_administrador_escenas().transition_to_scene(nueva_escena, spawn_location)
 
 
 func _on_deteccion_body_entered(body: Node2D) -> void:
