@@ -581,6 +581,11 @@ shape = SubResource("RectangleShape2D_qwbmm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = -96
+limit_right = 1408
+limit_bottom = 304
+limit_smoothed = true
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("default_state")]
 script = ExtResource("5_fl5uq")

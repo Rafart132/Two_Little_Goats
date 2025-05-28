@@ -1,7 +1,8 @@
 extends PlayerStateBase
 
 
-	
+@export var caminar = 100
+@export var correr = 200
 
 func on_physics_process(_delta: float) -> void:
 	update_animation()

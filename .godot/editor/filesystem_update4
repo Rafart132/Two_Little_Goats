@@ -1,10 +1,4 @@
-res://escenas/administrador_escena.tscn
 res://escenas/player/player.tscn
-res://escenas/mapa_2.tscn
+res://escenas/administrador_escena.tscn
 res://escenas/prueba.tscn
 res://escenas/entidades/maid.tscn
-res://Scr/Maquina de estados/state_machine.gd
-res://maid1.tscn
-res://Scr/Maquina de estados/entities_states/ChaseState.gd
-res://escenas/entidades/maid.gd
-res://Scr/Maquina de estados/entities_states/PatrolState.gd

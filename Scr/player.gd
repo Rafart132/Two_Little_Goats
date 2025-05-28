@@ -1,7 +1,6 @@
 class_name Player
 extends CharacterBody2D
 
-@export var speed:float = 100
 @export var VerticalSpeed:float = .3
 
 @onready var anim:AnimatedSprite2D = $Anim
@@ -9,6 +8,7 @@ extends CharacterBody2D
 var last_direccion = "Idle_Down"
 var direction = Vector2.ZERO
 var input_direccion:Vector2 = Vector2(0,1)
+var speed:float = 100
 
 var states:PlayerStateNames = PlayerStateNames.new()
 

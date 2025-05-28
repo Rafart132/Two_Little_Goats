@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://btarvgts0qqsy" path="res://Assets/stage_one.png" id="2_lvevr"]
 [ext_resource type="Script" uid="uid://dtb7cnn5026ny" path="res://Scr/Maquina de estados/entities_states/PatrolState.gd" id="3_i1rrp"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lvevr"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1rrp"]
+size = Vector2(16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_46tsx"]
 atlas = ExtResource("2_lvevr")
@@ -151,7 +152,7 @@ collision_layer = 2
 script = ExtResource("1_i1rrp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_lvevr")
+shape = SubResource("RectangleShape2D_i1rrp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
@@ -161,7 +162,6 @@ animation = &"Walk_up"
 frame_progress = 0.551857
 
 [node name="zona_deteccion" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zona_deteccion"]
